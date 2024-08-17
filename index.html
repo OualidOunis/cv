@@ -39,12 +39,15 @@
              </div>
            </li>
            <li>
-             <div class="icon">
+             <div class="icon"  onclick="copyToClipboard()" style="cursor: pointer;">
                <i class="fas fa-envelope"></i>
              </div>
              <div class="data">
-               owalidounis@gmail.com
+               owalidounis@gmail.com<br>
+			   <a onclick="copyToClipboard()" style="cursor: pointer; color: #b1eaff;">Copied</a>
              </div>
+			 
+			 
            </li>
          </ul>
        </div>
@@ -110,6 +113,7 @@
              <div class="data">
                <p class="semi-bold">Facebook</p>
                <p>fb.com/realwalidounis</p>
+			   <a href="https://www.fb.com/realwalidounis">See More</a>
              </div>
            </li>
            <li>
@@ -120,6 +124,7 @@
              <div class="data">
                <p class="semi-bold">Linkedin</p>
                <p>linkedin.com/in/<br>oualidounis</p>
+			   <a href="https://www.linkedin.com/in/oualidounis">See More</a>
              </div>
            </li>
            <li>
@@ -129,6 +134,7 @@
              <div class="data">
                <p class="semi-bold">Telegram</p>
                <p>t.me/oualidounis</p>
+			   <a href="https://www.t.me/oualidounis">See More</a>
              </div>
            </li>
          </ul>
@@ -276,4 +282,17 @@
 	
 
 </div>
-	
+	<script>
+        function copyToClipboard() {
+            const email = "owalidounis@gmail.com";
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Email copied to clipboard: " + email);
+        }
+    </script>
+	</body>
+</html>	
